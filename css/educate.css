@@ -1,0 +1,643 @@
+
+/* all styllins of the pages */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    font-weight: 800;
+}
+
+:root{
+    --matte-black:#04191c;
+    --cool-sage : #304946;
+    --red-brown: #d14e30;
+    --creamy-peach: #fae3c4;
+     --peach: #fdf5e7;
+}
+
+
+/* navigation bar */
+
+.header_nav{
+    padding: 1rem;
+    background-color: var(--red-brown);
+    color: var(--peach);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.header_nav div{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.header_nav div img{
+    width: 20px;
+}
+
+.header_nav .icons img{
+    width: 20px;
+}
+
+nav{
+    background-color: var(--creamy-peach);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--drak-blue-lik);
+    transition: .2s ease-in-out;
+    margin-right: .5rem;
+    position: relative;
+}
+
+ nav .links  a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: var(--red-brown);
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+
+#solid{
+   color: var(--red-brown);
+}
+
+
+nav #logo{
+    width: 270px;
+    max-width: 100%;
+}
+
+nav #search{
+    width: 25px;
+    margin-left: 1rem;  
+}
+
+#donate{
+    border-radius: 15%;
+    background-color: var(--red-brown);
+    padding: 1rem;
+    color: var(--peach);
+     transition: .3s ease-in-out;
+}
+
+#donate:hover{
+    background-color: var(--cool-sage);
+     transition: .3s ease-in-out;
+}
+
+
+aside a{
+    text-decoration: none;
+}
+
+
+aside{
+    margin: 15rem;
+    text-align: center;
+    color: var(--peach);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+aside p{
+    font-size: 2rem;
+}
+
+aside button{
+    margin-top: .5rem;
+    padding: 1rem;
+    color: var(--peach);
+    background-color: var(--red-brown);
+    border-radius: 10px;
+    transition: .5s ease-in-out;
+}
+
+aside button:hover{
+    background-color: var(--cool-sage);
+     transition: .5s ease-in-out;
+}
+
+
+.hero-section{
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.background-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    position: fixed;
+    filter: brightness(60%);
+}
+
+
+@media (min-aspect-ratio:16/9){
+    .background-video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio:16/9){
+    .background-video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+
+
+
+
+/* main sections */
+
+main{
+    background-color: var(--peach);
+}
+
+
+.section5{
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section5 h2{
+    color: var(--cool-sage);
+    font-size: 3rem;
+}
+
+.section5 .content{
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section5 .content .text_svgs{
+    padding: 2rem;
+    background-color: var(--matte-black);
+    color: var(--peach);
+    margin: 1rem;
+    width: 25rem;
+    max-width: 100%;
+}
+
+
+.section5 button{
+    margin-top: .5rem;
+    padding: 1rem;
+    color: var(--peach);
+    background-color: var(--red-brown);
+    border-radius: 10px;
+    transition: .5s ease-in-out;
+}
+
+.section5 button:hover{
+    background-color: var(--cool-sage);
+     transition: .5s ease-in-out;
+}
+
+.FAQS{
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.FAQS h2{
+    text-align: center;
+    margin: 1rem;
+    color: var(--cool-sage);
+    font-size: 4rem;
+}
+
+.FAQS select{
+    padding: 1rem;
+    background-color: var(--matte-black);
+    color: var(--peach);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.btn{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.FAQS button{
+    margin-top: .5rem;
+    padding: 1rem;
+    color: var(--peach);
+    background-color: var(--red-brown);
+    border-radius: 10px;
+    transition: .5s ease-in-out;
+}
+
+.FAQS button:hover{
+    background-color: var(--cool-sage);
+     transition: .5s ease-in-out;
+}
+
+.possible_solutions{
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+.possible_solutions .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.possible_solutions article{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.possible_solutions .content img{
+    width: 20rem;
+    max-width: 100%;
+}
+
+.possible_solutions h1{
+    color: var(--cool-sage);
+    font-size: 3rem;
+}
+
+.possible_solutions button{
+    margin-top: .5rem;
+    padding: 1rem;
+    color: var(--peach);
+    background-color: var(--red-brown);
+    border-radius: 10px;
+    transition: .5s ease-in-out;
+}
+
+.possible_solutions button:hover{
+    background-color: var(--cool-sage);
+     transition: .5s ease-in-out;
+}
+
+.finish{
+    text-align: center;
+    color: var(--peach);
+    background-color: var(--matte-black);
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.finish button{
+    margin-top: .5rem;
+    padding: 1rem;
+    color: var(--peach);
+    background-color: var(--red-brown);
+    border-radius: 10px;
+    transition: .5s ease-in-out;
+}
+
+.finish button:hover{
+    background-color: var(--cool-sage);
+     transition: .5s ease-in-out;
+}
+
+
+
+
+
+/* footer */
+footer{
+    background-color: var(--creamy-peach);
+    color: var(--matte-black);
+    padding: 2rem;
+}
+
+footer h2{
+    color: var(--red-brown);
+}
+
+.main_section_from_footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--white-smok-like);
+}
+
+footer .quick_links{
+    display: flex;
+    flex-direction: column;
+}
+
+footer .contact_us{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+footer h2{
+    margin-bottom: 1rem;
+}
+
+
+#section2{
+    text-align: center;
+    margin: 2rem;
+}
+
+footer hr .line{
+    width: 100vw;
+    color: var(--white-like);
+}
+
+footer .log img{
+    width: 20rem;
+    max-width: 100%;
+}
+
+footer .log p{
+    padding: -5rem;
+    margin-top: -5rem;
+}
+
+footer .icons img{
+    width: 30px;
+}
+
+/* ==================== MEDIA QUERIES ==================== */
+
+/* Tablet Devices (768px - 1024px) */
+@media (max-width: 1024px) {
+    .section5 {
+        padding: 3rem;
+    }
+    
+    .section5 h2 {
+        font-size: 2.5rem;
+    }
+    
+    .FAQS {
+        padding: 3rem;
+    }
+    
+    .FAQS h2 {
+        font-size: 3rem;
+    }
+    
+    .possible_solutions {
+        padding: 3rem;
+    }
+    
+    .possible_solutions h1 {
+        font-size: 2.5rem;
+    }
+    
+    .finish {
+        padding: 3rem;
+    }
+    
+    aside {
+        margin: 10rem;
+    }
+}
+
+/* Mobile Landscape (480px - 768px) */
+@media (max-width: 768px) {
+    /* Navigation */
+    .header_nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .header_nav div {
+        justify-content: center;
+    }
+    
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav .links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    nav #logo {
+        width: 200px;
+    }
+    
+    /* Hero Section */
+    aside {
+        margin: 5rem 2rem;
+    }
+    
+    aside p {
+        font-size: 1.5rem;
+    }
+    
+    /* Section 5 */
+    .section5 {
+        padding: 2rem;
+    }
+    
+    .section5 h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .section5 .content {
+        padding: 1rem;
+    }
+    
+    .section5 .content .text_svgs {
+        padding: 1.5rem;
+        width: 100%;
+    }
+    
+    /* FAQS */
+    .FAQS {
+        padding: 2rem;
+    }
+    
+    .FAQS h2 {
+        font-size: 2rem;
+    }
+    
+    .btn {
+        flex-direction: column;
+    }
+    
+    .FAQS button {
+        width: 100%;
+    }
+    
+    /* Possible Solutions */
+    .possible_solutions {
+        padding: 2rem;
+    }
+    
+    .possible_solutions h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .possible_solutions .content {
+        flex-direction: column;
+    }
+    
+    .possible_solutions article {
+        text-align: center;
+    }
+    
+    /* Finish Section */
+    .finish {
+        padding: 2rem;
+    }
+    
+    /* Footer */
+    .main_section_from_footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    footer .quick_links,
+    footer .contact_us {
+        align-items: center;
+    }
+}
+
+/* Mobile Portrait (320px - 480px) */
+@media (max-width: 480px) {
+    /* Typography */
+    aside p {
+        font-size: 1.2rem;
+    }
+    
+    .section5 h2 {
+        font-size: 1.5rem;
+    }
+    
+    .FAQS h2 {
+        font-size: 1.5rem;
+    }
+    
+    .possible_solutions h1 {
+        font-size: 1.5rem;
+    }
+    
+    .finish p {
+        font-size: 0.9rem;
+    }
+    
+    /* Buttons */
+    aside button,
+    .section5 button,
+    .FAQS button,
+    .possible_solutions button,
+    .finish button {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+        width: 100%;
+    }
+    
+    /* Cards */
+    .section5 .content .text_svgs {
+        padding: 1rem;
+    }
+    
+    /* Images */
+    .possible_solutions .content img {
+        width: 15rem;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 1rem;
+    }
+    
+    footer .log img {
+        width: 15rem;
+    }
+    
+    #donate {
+        padding: 0.7rem;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+    .section5 {
+        padding: 5rem;
+    }
+    
+    .FAQS {
+        padding: 5rem;
+    }
+    
+    .possible_solutions {
+        padding: 5rem;
+    }
+}
+
+

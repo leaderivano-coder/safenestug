@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/report.css">
+    <title>.....Safe-Nest../Report-A-Case</title>
+  </head>
+  <body>
+    <!-- navigation bar -->
+    <header>
+      <video autoplay loop muted plays-inline class="background-video">
+        <source src="images/report.mp4" type="video/mp4" />
+      </video>
+      <div class="header_nav">
+        <div>
+          <p><img src="logs and icons/email.png" alt="" /> inf@safenest.org</p>
+          <p>
+            <img src="logs and icons/phone-call.png" alt="" />
+            +256.(0).773.92.59.81
+          </p>
+        </div>
+
+        <div class="icons">
+          <img src="logs and icons/facebook-app-symbol.png" alt="" />
+          <img src="logs and icons/youtube (1).png" alt="" />
+          <img src="logs and icons/twitter.png" alt="" />
+          <img src="logs and icons/linkedin (1).png" alt="" />
+        </div>
+      </div>
+
+      <nav>
+        <div>
+          <h1>
+            <img
+              href="home page.html"
+              id="logo"
+              src="logs and icons/log.png"
+              alt=""
+            />
+          </h1>
+        </div>
+
+        <div class="links">
+          <a href="home page.html">Home</a>
+          <a href="about us .html">About us</a>
+          <a href="contact us.html">Contact Us</a>
+          <a href="educate.html">Educate</a>
+          <a href="educate.html" id="solid">Reports</a>
+        </div>
+
+        <div class="logo">
+          <a id="donate" href="contact us.html">JOIN US TODAY</a>
+        </div>
+      </nav>
+
+      <aside class="context">
+        <p>Protecting The Child For Future.</p>
+       <a href="Report.html"> <button>REPORT A CASE</button></a>
+      </aside>
+    </header>
+
+    <!-- main sections -->
+     <main>
+      <body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🛡️ Child Protection <span>Reporting System</span></h1>
+            <p>Report child abuse anonymously • Your report can save a child's life</p>
+            <div class="emergency-badge">🚨 EMERGENCY? Call Child Helpline: 112</div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" id="totalReports">0</div>
+                <div class="stat-label">Total Reports</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="pendingReports">0</div>
+                <div class="stat-label">Under Review</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="investigatingReports">0</div>
+                <div class="stat-label">Investigating</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="resolvedReports">0</div>
+                <div class="stat-label">Resolved</div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="two-columns">
+            <!-- Report Form -->
+            <div class="form-section">
+                <h2 class="section-title">📝 Submit New Report</h2>
+                <form id="reportForm">
+                    <div class="form-group">
+                        <label>Reporter Name (Optional)</label>
+                        <input type="text" id="reporterName" placeholder="You can remain anonymous">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Child's Name / Alias *</label>
+                        <input type="text" id="childName" required placeholder="Name or alias of the child">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Child's Age *</label>
+                        <input type="number" id="childAge" required min="0" max="18" placeholder="Age in years">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Location of Incident *</label>
+                        <input type="text" id="location" required placeholder="Address, city, or landmark">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Type of Abuse *</label>
+                        <select id="abuseType" required>
+                            <option value="">Select abuse type</option>
+                            <option value="physical">Physical Abuse</option>
+                            <option value="sexual">Sexual Abuse</option>
+                            <option value="emotional">Emotional/Psychological Abuse</option>
+                            <option value="neglect">Neglect</option>
+                            <option value="exploitation">Child Exploitation</option>
+                            <option value="bullying">Bullying/Cyberbullying</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Description of Incident *</label>
+                        <textarea id="description" rows="4" required placeholder="Please provide detailed information about the incident..."></textarea>
+                    </div>
+
+                    <!-- Media Upload -->
+                    <div class="form-group">
+                        <label>Upload Evidence (Images/Videos)</label>
+                        <div class="media-upload" id="mediaUploadArea">
+                            <div class="upload-icon">📎</div>
+                            <div class="upload-text">Click or drag files here to upload</div>
+                            <div class="upload-hint">Supports: JPG, PNG, GIF, MP4, MOV (Max 10MB each)</div>
+                        </div>
+                        <input type="file" id="mediaInput" multiple accept="image/*,video/*" style="display: none;">
+                        <div class="media-preview" id="mediaPreview"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Contact (Optional - for follow-up)</label>
+                        <input type="email" id="contactEmail" placeholder="Email or phone number">
+                    </div>
+
+                    <button type="submit" class="submit-btn">🚨 Submit Confidential Report</button>
+                </form>
+            </div>
+
+            <!-- Reports List -->
+            <div class="reports-section">
+                <h2 class="section-title">📋 Recent Reports</h2>
+                
+                <div class="filter-bar">
+                    <input type="text" class="filter-input" id="searchReports" placeholder="Search by child name or location...">
+                    <select class="filter-input" id="statusFilter">
+                        <option value="all">All Status</option>
+                        <option value="pending">Pending Review</option>
+                        <option value="investigating">Investigating</option>
+                        <option value="resolved">Resolved</option>
+                    </select>
+                </div>
+
+                <div id="reportsList">
+                    <!-- Reports will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for media viewing -->
+    <div id="mediaModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content" id="modalContent"></div>
+    </div>
+
+    <!-- Alert -->
+    <div id="alert" class="alert"></div>
+
+  
+     </main>
+  
+
+    <!-- footer section -->
+    <footer>
+      <section class="main_section_from_footer">
+        <div class="contact_us">
+          <h2>CONTACT</h2>
+          <div>
+            <p>T:+256.(0).773.92.59.81</p>
+            <p>E:contact@safenest.com</p>
+          </div>
+
+          <div class="icons">
+            <img src="icons 2/facebook.png" alt="" />
+            <img src="icons 2/instagram.png" alt="" />
+            <img src="icons 2/linkedin.png" alt="" />
+            <img src="icons 2/youtube.png" alt="" />
+            <img src="icons 2/twitter-sign.png" alt="" />
+          </div>
+        </div>
+
+        <div class="quick_links">
+          <h2>QUICK LINKS</h2>
+          <a href="home page.html">Home</a>
+          <a href="about us .html">About us</a>
+          <a href="contact us.html">Contact us</a>
+          <a href="educate.html">Stay Educated</a>
+          <a href="contact us.html">Join us today</a>
+          <a href="Report.html">Reports</a>
+        </div>
+
+        <div class="legal_info">
+          <h2>LEGAL INFO</h2>
+          <p>Privacy Policy</p>
+          <p>Terms of Use</p>
+          <p>Information Use</p>
+          <p>children inf</p>
+          <p>Reports</p>
+          <p>Community</p>
+        </div>
+
+        <div class="log">
+          <img src="logs and icons/log.png" alt="" />
+           <p>
+            Child abuse is a community wound, not a  <br>
+           family secret. Silence protects the abuser.   <br>
+          Speaking up protects the child.  <br>
+          Every neighbor, leader, <br> and parent must act as one shield.
+          </p>
+        </div>
+      </section>
+
+      <section id="section2">
+        <p>
+          &copy;2026 safenest.All rights reserved
+          <br />Terms & Conditions Apply
+        </p>
+      </section>
+    </footer>
+
+    <!-- javascript -->
+    <script src="javascript/project.js"></script>
+  </body>
+</html>
+
+
